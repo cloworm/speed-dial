@@ -1,6 +1,6 @@
 import { LightningElement, api } from "lwc";
 
-export default class Speeddial extends LightningElement {
+export default class SpeedDial extends LightningElement {
   @api options = [];
   showOptions;
 
