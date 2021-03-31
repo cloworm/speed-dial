@@ -1,0 +1,20 @@
+name: ci
+on: [push]
+jobs:
+  check-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: "14"
+      - run: npm install
+      - run: npm run prettier:verify
+      - run: npm run lint:lwc
+      - run: npm run test
+      - run: npm run test:unit:coverage
+      # # Upload code coverage data
+#       - name: 'Upload code coverage for LWC to Codecov.io'
+#         uses: codecov/codecov-action@v1
+#         with:
+#             flags: LWC
