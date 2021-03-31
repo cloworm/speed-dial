@@ -30,7 +30,7 @@ I used [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/
 | Property                 | Default                              |
 | ------------------------ | ------------------------------------ |
 | --speed-dial-primary     | #ec7a25                              |
-| --speed-dial-accent      | #333333                              |
+| --speed-dial-secondary   | #333333                              |
 | --speed-dial-icon        | #fff                                 |
 | ---speed-dial-text       | #e5e5e5                              |
 | --speed-dial-font-family | "Salesforce Sans", Arial, sans-serif |
