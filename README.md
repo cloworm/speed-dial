@@ -1,18 +1,36 @@
-# Salesforce DX Project: Next Steps
+<div align="center">
+  <h1>Speed Dial Lightning Web Component</h1>
+</div>
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+<div align="center">
+  <h3>Speed Dial UI component inspired by <a href="https://material.io/components/buttons-floating-action-button#types-of-transitions" target="_blank" rel="noopener noreferrer">Material Design</a></h3>
 
-## How Do You Plan to Deploy Your Changes?
+  <img src="https://user-images.githubusercontent.com/5566310/113195156-ee0ed600-922f-11eb-9a69-0a9590da882a.gif">
+</div>
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Overview
 
-## Configure Your Salesforce DX Project
+This themeable speed dial component is ideal for giving your users quick access to the 3-6 actions they perform most frequently
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Usage
 
-## Read All About It
+See the example component in `./force-app/main/default/lwc/example` for a sample implementation.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### Component API
+
+| Name                                      | Type   | Description                                                     |
+| ----------------------------------------- | ------ | --------------------------------------------------------------- |
+| options: { name: string, icon: string }[] | Input  | Array of 3 - 6 objects representing the actions you can perform |
+| buttonclick: { detail }                   | Output | Emits the `name` of the button clicked                          |
+
+### Theming
+
+I used [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) to define the styling of the component so that you can customize the theme of the component just like you would use the new [LDS Styling Hooks](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.create_components_css_custom_properties)
+
+| Property                 | Default                              |
+| ------------------------ | ------------------------------------ |
+| --speed-dial-primary     | #ec7a25                              |
+| --speed-dial-accent      | #333333                              |
+| --speed-dial-icon        | #fff                                 |
+| ---speed-dial-text       | #e5e5e5                              |
+| --speed-dial-font-family | "Salesforce Sans", Arial, sans-serif |
