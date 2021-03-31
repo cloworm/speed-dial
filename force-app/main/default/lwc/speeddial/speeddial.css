@@ -1,0 +1,35 @@
+:host {
+  --speeddial-primary: #EC7A25;
+  --speeddial-color: #fff;
+}
+
+.dial-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.dial {
+  background: var(--speeddial-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.dial:hover {
+  filter: brightness(0.9);
+}
+
+.dial:hover .dial-icon {
+  transform: rotate(45deg);
+}
+
+.dial-icon {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --sds-c-icon-color-foreground-default: #fff;
+}
