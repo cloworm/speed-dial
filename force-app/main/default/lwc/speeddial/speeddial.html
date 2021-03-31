@@ -4,7 +4,11 @@
       <template for:each={options} for:item="option">
         <div key={option.name} class="option-container">
           <div class="label shadow">{option.name}</div>
-          <div class="option shadow" onclick={handleClick}>
+          <div
+            class="option shadow"
+            onclick={handleClick}
+            data-name={option.name}
+          >
             <lightning-icon
               class="option-icon"
               icon-name={option.icon}

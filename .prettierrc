@@ -3,7 +3,15 @@
   "overrides": [
     {
       "files": "**/lwc/**/*.html",
-      "options": { "parser": "lwc", "singleQuote": true, "trailingComma": "es5" }
+      "options": { "parser": "lwc" }
+    },
+    {
+      "files": "**/lwc/**/*.js",
+      "options": {
+        "parser": "babel",
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
     },
     {
       "files": "*.{cmp,page,component}",
