@@ -1,7 +1,35 @@
 <template>
-  <div class="dial-container">
-    <div class="dial">
-      <lightning-icon class="dial-icon" icon-name="utility:add" size="x-small" alternative-text="Dial Icon" title="Dial Icon"></lightning-icon>
+  <div class="dial-container" onmouseleave={handleHideOptions}>
+    <template if:true={showOptions}>
+      <template for:each={options} for:item="option">
+        <div key={option.name} class="option-container">
+          <div class="label shadow">{option.name}</div>
+          <div class="option shadow" onclick={handleClick}>
+            <lightning-icon
+              data-name={option.name}
+              class="option-icon"
+              icon-name={option.icon}
+              size="xx-small"
+              alternative-text={option.name}
+              title={option.name}
+            ></lightning-icon>
+          </div>
+        </div>
+      </template>
+    </template>
+
+    <div
+      class="dial shadow"
+      onmouseenter={handleShowOptions}
+      onclick={handleToggleOptions}
+    >
+      <lightning-icon
+        class="dial-icon"
+        icon-name="utility:add"
+        size="x-small"
+        alternative-text="Dial Icon"
+        title="Dial Icon"
+      ></lightning-icon>
     </div>
   </div>
 </template>

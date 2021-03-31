@@ -1,9 +1,14 @@
 :host {
-  --speeddial-primary: #EC7A25;
+  --speeddial-primary: #ec7a25;
   --speeddial-color: #fff;
+  --speeddial-accent: #333333;
+  --speeddial-text: #e5e5e5;
 }
 
 .dial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -18,18 +23,100 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
 }
 
 .dial:hover {
   filter: brightness(0.9);
 }
 
-.dial:hover .dial-icon {
+.rotate .dial-icon {
   transform: rotate(45deg);
 }
 
 .dial-icon {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  --sds-c-icon-color-foreground-default: #fff;
+  --sds-c-icon-color-foreground-default: var(--speeddial-color);
+}
+
+.option-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  animation: zoom 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.label {
+  text-transform: capitalize;
+  background: var(--speeddial-accent);
+  border-radius: 4px;
+  color: var(--speeddial-text);
+  padding: 5px 15px;
+  margin-right: 10px;
+}
+
+.option {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: var(--speeddial-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.option:hover {
+  filter: brightness(0.9);
+}
+
+.shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.option-icon {
+  --sds-c-icon-color-foreground-default: var(--speeddial-text);
+}
+
+.dial-container .option-container:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.dial-container .option-container:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.dial-container .option-container:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.dial-container .option-container:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.dial-container .option-container:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.dial-container .option-container:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+.dial-container .option-container:nth-child(7) {
+  animation-delay: 0.4s;
 }
