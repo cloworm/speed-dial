@@ -1,0 +1,7 @@
+.themed-dial {
+  --speed-dial-primary: #9575cd !important;
+  --speed-dial-secondary: #80deea !important;
+  --speed-dial-icon: #000 !important;
+  --speed-dial-text: #000 !important;
+  --speed-dial-font-family: 'Courier New', monospace !important;
+}

@@ -1,6 +1,6 @@
 :host {
   --speed-dial-primary: #ec7a25;
-  --speed-dial-accent: #333333;
+  --speed-dial-secondary: #333333;
   --speed-dial-icon: #fff;
   --speed-dial-text: #e5e5e5;
   --speed-dial-font-family: "Salesforce Sans", Arial, sans-serif;
@@ -60,10 +60,11 @@
 }
 
 .label {
-  text-transform: capitalize;
-  background: var(--speed-dial-accent);
-  border-radius: 4px;
+  font-family: var(--speed-dial-font-family);
   color: var(--speed-dial-text);
+  text-transform: capitalize;
+  background: var(--speed-dial-secondary);
+  border-radius: 4px;
   padding: 5px 15px;
   margin-right: 10px;
 }
@@ -73,7 +74,7 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background: var(--speed-dial-accent);
+  background: var(--speed-dial-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
