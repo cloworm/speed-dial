@@ -82,7 +82,7 @@
       <property
         name="fontFamily"
         label="Font Family"
-        type="Color"
+        type="String"
         default="&quot;Salesforce Sans&quot;, Arial, sans-serif"
         required="true"
       />
